@@ -44,7 +44,7 @@ jobs:
 
     - name: Sed
       run: |
-        sed --expression "s|{{AWS_ID}}|635107281823|" \
+        sed --expression "s|{{ACCOUNT_ID}}|${{ secrets.ACCOUNT_ID }}|" \
           task-definition.json \
           > task-definition.json
 
