@@ -50,4 +50,4 @@ jobs:
       with:
         task-definition: ${{ steps.render-web-container.outputs.task-definition }}
         service: my-service
-        cluster: test
+        cluster: test 
