@@ -40,10 +40,12 @@ jobs:
 
     - run: |
       cat task-definition.json
+
     - run: |
       sed --expression "s|{{AWS_ID}}|635107281823|" \
         task-definition.json \
         > task-definition.json
+
     - run: |
       cat task-definition.json
       
