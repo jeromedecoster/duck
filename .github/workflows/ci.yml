@@ -1,0 +1,14 @@
+name: ci
+
+on: [push, pull_request]
+
+env: 
+  IMAGE_NAME: "duck"
+  AWS_REGION: "eu-west-3"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Clone
+      uses: actions/checkout@v2
