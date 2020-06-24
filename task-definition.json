@@ -1,0 +1,30 @@
+{
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "inferenceAccelerators": [],
+    "containerDefinitions": [
+        {
+            "name": "web",
+            "image": "635107281823.dkr.ecr.eu-west-3.amazonaws.com/duck:f6c5a0fb952894705a4bb989394ee981638ff149",
+            "resourceRequirements": null,
+            "essential": true,
+            "portMappings": [
+                {
+                    "hostPort": 80,
+                    "containerPort": 80,
+                    "protocol": "tcp"
+                }
+                
+            ]
+        }
+    ],
+    "volumes": [],
+    "networkMode": "awsvpc",
+    "memory": "512",
+    "cpu": "256",
+    "executionRoleArn": "arn:aws:iam::635107281823:role/ecsTaskExecutionRole",
+    "family": "docker-ecs-fargate",
+    "taskRoleArn": "",
+    "placementConstraints": []
+}
